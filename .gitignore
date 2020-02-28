@@ -4,4 +4,4 @@ lib
 *.kdev4
 core
 msg_gen
-src/rviz_hitl_slam_tool
+src/rviz_write_button

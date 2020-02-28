@@ -1,9 +1,8 @@
-<library path="lib/libhitl_slam_tool">
-  <class name="rviz_hitl_slam/HitlSlamTool"
-         type="rviz_hitl_slam::HitlSlamTool"
+<library path="lib/librviz_write_button">
+  <class type="rviz_write_button::WriteButton"
          base_class_type="rviz::Tool">
     <description>
-      Publish human interaction for human in the loop SLAM
+      A simple button to publish a message over /write_poses so that we can write the output of lidar slam.
     </description>
   </class>
 </library>

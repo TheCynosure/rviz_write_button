@@ -1,6 +1,6 @@
 # RViz hitl SLAM interaction tool
 
-RViz plugin to publish human interaction for human in the loop SLAM
+RViz plugin to publish a message over /write\_button so that we can write the poses from lidar slam to a file.
 
 ## Dependencies
 Install [ROS](http://wiki.ros.org/ROS/Installation)
@@ -14,8 +14,6 @@ Install [ROS](http://wiki.ros.org/ROS/Installation)
     ```
     rosrun rviz rviz
     ```
-1. Add the plugin to RViz using the "+" button on the toolbar, and select "HitlSlamTool". If you do not see the tool listed, ensure that this repo is in your `ROS_PACKAGE_PATH`.
-1. To use the tool, click on the "Hitl Slam Tool" button.
-1. Click and drag to select first line.
-1. Click and drag to select second line.
-1. After the second line is selected, the results are published to the topic `/hitl_slam_input`, of type `rviz_hitl_slam_tool/HitlSlamInputMsg`, which is also defined by this package.
+1. Add the plugin to RViz using the "+" button on the toolbar, and select "WriteButton". If you do not see the tool listed, ensure that this repo is in your `ROS_PACKAGE_PATH`.
+1. To use the tool, click on the "Write to file" button.
+1. A message is published to the topic `/write_button`, of type `write_button/WriteMsgMsg`, which is also defined by this package.

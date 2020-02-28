@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.4.6)
-project(rviz_hitl_slam_tool)
+project(rviz_write_button)
 
 include($ENV{ROS_ROOT}/core/rosbuild/rosbuild.cmake)
 set(ROS_BUILD_TYPE RelWithDebInfo)
@@ -18,20 +18,21 @@ rosbuild_genmsg()
 ## Here we specify which header files need to be run through "moc",
 ## Qt's meta-object compiler.
 qt4_wrap_cpp(MOC_FILES
-  src/hitl_slam_tool.h
+  src/rviz_write_button.h
 )
 
 ## Here we specify the list of source files, including the output of
 ## the previous command which is stored in ``${MOC_FILES}``.
 set(SOURCE_FILES
-  src/hitl_slam_tool.cpp
+  src/rviz_write_button.cc
   ${MOC_FILES}
 )
 
 set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 
-rosbuild_add_library(hitl_slam_tool
+rosbuild_add_library(rviz_write_button
     ${SOURCE_FILES}
-    src/hitl_slam_tool.h
+    src/rviz_write_button.h
     ${MOC_FILES})
-target_link_libraries(hitl_slam_tool ${QT_LIBRARIES})
+rosbuild_add_executable(rviz_write_button src/rviz_write_button.cc)
+target_link_libraries(rviz_write_button ${QT_LIBRARIES})

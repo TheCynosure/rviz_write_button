@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012, Willow Garage, Inc.
+ * Copyright (c) 2011, Willow Garage, Inc.
  * Copyright (c) 2019, Joydeep Biswas joydeepb@cs.umass.edu
  * All rights reserved.
  *
@@ -27,62 +27,44 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-#ifndef HITL_SLAM_TOOL_H
-#define HITL_SLAM_TOOL_H
 
-#ifndef Q_MOC_RUN
-#include <ros/ros.h>
-#include <rviz/tool.h>
-#endif
+#include <ros/console.h>
+#include <rviz/visualization_manager.h>
 
-#include <eigen3/Eigen/Dense>
+#include "rviz_write_button/WriteMsg.h"
+#include "rviz_write_button.h"
 
-namespace rviz {
-  class ViewportMouseEvent;
-}  // namespace rviz
+namespace rviz_write_button {
 
-namespace Ogre {
-  class ManualObject;
-}  // namespace Ogre
+    WriteButton::WriteButton() {
+      ros::NodeHandle n_;
+      publisher_=  n_.advertise<rviz_write_button::WriteMsg>("/write_output",
+                                                             10);
+    }
 
-namespace rviz_hitl_slam {
+    WriteButton::~WriteButton() {
 
-enum class State {
-  kDisabled = 0,
-  kStartLineA,
-  kLineA,
-  kStartLineB,
-  kLineB
-};
+    }
 
-class HitlSlamTool : public rviz::Tool {
-Q_OBJECT
-public:
-  ros::NodeHandle n_;
-  ros::Publisher publisher_;
+    void WriteButton::onInitialize() {
 
-  HitlSlamTool();
-  ~HitlSlamTool();
+    }
 
-  virtual void onInitialize();
+    void WriteButton::activate() {
+      Publish();
 
-  virtual void activate();
-  virtual void deactivate();
+    }
 
-  virtual int processMouseEvent(rviz::ViewportMouseEvent& event);
+    void WriteButton::deactivate() {
+    }
 
-  void Publish();
+    void WriteButton::Publish() {
+      rviz_write_button::WriteMsg write_msg;
+      write_msg.write = true;
+      publisher_.publish(write_msg);
+    }
 
-  Ogre::ManualObject* line_a_object_;
-  Ogre::ManualObject* line_b_object_;
-  Eigen::Vector2f line_a_start;
-  Eigen::Vector2f line_a_end;
-  Eigen::Vector2f line_b_start;
-  Eigen::Vector2f line_b_end;
-  State state;
+} // namespace rviz_write_button
 
-};
-
-}  // namespace rviz_hitl_slam
-
-#endif // HITL_SLAM_TOOL_H
+#include <pluginlib/class_list_macros.h>
+PLUGINLIB_EXPORT_CLASS(rviz_write_button::WriteButton, rviz::Tool)

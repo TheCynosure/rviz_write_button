@@ -1,0 +1,95 @@
+/home/jack/Dev/Tools/clion-2019.3.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/jack/Dev/Lab/rviz_write_button
+-- The C compiler identification is GNU 7.4.0
+-- The CXX compiler identification is GNU 7.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CMake Deprecation Warning at /opt/ros/melodic/share/ros/core/rosbuild/rosbuild.cmake:7 (cmake_policy):
+  The OLD behavior for policy CMP0011 will be removed from a future version
+  of CMake.
+
+  The cmake-policies(7) manual explains that the OLD behaviors of all
+  policies are deprecated and that a policy should be set to OLD only under
+  specific short-term circumstances.  Projects should be ported to the NEW
+  behavior and not rely on setting a policy to OLD.
+Call Stack (most recent call first):
+  CMakeLists.txt:4 (include)
+
+
+CMake Deprecation Warning at /opt/ros/melodic/share/ros/core/rosbuild/rosbuild.cmake:16 (cmake_policy):
+  The OLD behavior for policy CMP0002 will be removed from a future version
+  of CMake.
+
+  The cmake-policies(7) manual explains that the OLD behaviors of all
+  policies are deprecated and that a policy should be set to OLD only under
+  specific short-term circumstances.  Projects should be ported to the NEW
+  behavior and not rely on setting a policy to OLD.
+Call Stack (most recent call first):
+  CMakeLists.txt:4 (include)
+
+
+CMake Deprecation Warning at /opt/ros/melodic/share/ros/core/rosbuild/rosbuild.cmake:18 (cmake_policy):
+  The OLD behavior for policy CMP0003 will be removed from a future version
+  of CMake.
+
+  The cmake-policies(7) manual explains that the OLD behaviors of all
+  policies are deprecated and that a policy should be set to OLD only under
+  specific short-term circumstances.  Projects should be ported to the NEW
+  behavior and not rely on setting a policy to OLD.
+Call Stack (most recent call first):
+  CMakeLists.txt:4 (include)
+
+
+CMake Deprecation Warning at /opt/ros/melodic/share/ros/core/rosbuild/rosbuild.cmake:20 (cmake_policy):
+  The OLD behavior for policy CMP0005 will be removed from a future version
+  of CMake.
+
+  The cmake-policies(7) manual explains that the OLD behaviors of all
+  policies are deprecated and that a policy should be set to OLD only under
+  specific short-term circumstances.  Projects should be ported to the NEW
+  behavior and not rely on setting a policy to OLD.
+Call Stack (most recent call first):
+  CMakeLists.txt:4 (include)
+
+
+CMake Deprecation Warning at /opt/ros/melodic/share/ros/core/rosbuild/rosbuild.cmake:23 (cmake_policy):
+  The OLD behavior for policy CMP0011 will be removed from a future version
+  of CMake.
+
+  The cmake-policies(7) manual explains that the OLD behaviors of all
+  policies are deprecated and that a policy should be set to OLD only under
+  specific short-term circumstances.  Projects should be ported to the NEW
+  behavior and not rely on setting a policy to OLD.
+Call Stack (most recent call first):
+  CMakeLists.txt:4 (include)
+
+
+-- Found PythonInterp: /usr/bin/python (found version "2.7.17") 
+[rosbuild] Building package rviz_write_button
+[rosbuild] Error from directory check: /opt/ros/melodic/share/ros/core/rosbuild/bin/check_same_directories.py  /home/jack/Dev/Lab/rviz_write_button
+1
+Traceback (most recent call last):
+  File "/opt/ros/melodic/share/ros/core/rosbuild/bin/check_same_directories.py", line 46, in <module>
+    raise Exception
+Exception
+CMake Error at /opt/ros/melodic/share/ros/core/rosbuild/private.cmake:102 (message):
+  [rosbuild] rospack found package "rviz_write_button" at "", but the current
+  directory is "/home/jack/Dev/Lab/rviz_write_button".  You should
+  double-check your ROS_PACKAGE_PATH to ensure that packages are found in the
+  correct precedence order.
+Call Stack (most recent call first):
+  /opt/ros/melodic/share/ros/core/rosbuild/public.cmake:177 (_rosbuild_check_package_location)
+  CMakeLists.txt:6 (rosbuild_init)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/jack/Dev/Lab/rviz_write_button/cmake-build-debug/CMakeFiles/CMakeOutput.log".

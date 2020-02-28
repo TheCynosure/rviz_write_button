@@ -1,16 +1,15 @@
 <package>
-  <description brief="RViz hitl SLAM interaction tool">
+  <description brief="RViz Write Button">
 
-     Publish human interaction for human in the loop SLAM
+     Publish message to trigger writing
 
   </description>
-  <author>Joydeep Biswas</author>
+  <author>John Bachman</author>
   <license>BSD</license>
   <review status="unreviewed" notes=""/>
-  <url>https://github.com/ut-amrl/rviz_hitl_slam_tool</url>
+  <url>https://github.com/theCynosure/rviz_write_button</url>
   <depend package="rviz"/>
   <depend package="std_msgs"/>
-  <depend package="geometry_msgs"/>
   <export>
       <rviz plugin="${prefix}/plugin_description.xml"/>
   </export>
