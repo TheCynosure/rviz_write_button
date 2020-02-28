@@ -1,4 +1,4 @@
-# RViz hitl SLAM interaction tool
+# RVIZ Write Button
 
 RViz plugin to publish a message over /write\_button so that we can write the poses from lidar slam to a file.
 
