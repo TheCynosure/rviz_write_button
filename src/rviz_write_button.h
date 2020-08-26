@@ -30,10 +30,8 @@
 #ifndef RVIZ_WRITE_BUTTON_H
 #define RVIZ_WRITE_BUTTON_H
 
-#ifndef Q_MOC_RUN
 #include <ros/ros.h>
 #include <rviz/tool.h>
-#endif
 
 namespace rviz_write_button {
 

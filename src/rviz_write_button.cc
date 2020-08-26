@@ -67,4 +67,5 @@ namespace rviz_write_button {
 } // namespace rviz_write_button
 
 #include <pluginlib/class_list_macros.h>
+
 PLUGINLIB_EXPORT_CLASS(rviz_write_button::WriteButton, rviz::Tool)
