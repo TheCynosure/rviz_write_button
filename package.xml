@@ -5,9 +5,9 @@
     A simple button to publish the write message over ROS.
   </description>
   <maintainer email="jbachman@umass.edu">Jack Bachman</maintainer>
-  <license>BSD</license>
+  <license>MIT</license>
 
-  <url>http://ros.org/wiki/foo_core</url>
+  <url>https://thecynosure.github.io/nautilus_docs/</url>
   <author email="jbachman@umass.edu">Jack Bachman</author>
 
   <buildtool_depend>catkin</buildtool_depend>
