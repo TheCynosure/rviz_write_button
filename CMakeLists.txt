@@ -4,7 +4,7 @@ project(rviz_write_button)
 FIND_PACKAGE(Qt5 COMPONENTS Core Gui REQUIRED)
 FIND_PACKAGE(catkin COMPONENTS message_runtime message_generation std_msgs roscpp rviz)
 SET(CMAKE_INCLUDE_CURRENT_DIR ON)
-SET(CMAKE_AUTOMOC ON)
+#SET(CMAKE_AUTOMOC ON)
 SET(CMAKE_CXX_FLAGS "-std=c++0x -Wall -Werror")
 
 ADD_DEFINITIONS(-DQT_NO_KEYWORDS)
